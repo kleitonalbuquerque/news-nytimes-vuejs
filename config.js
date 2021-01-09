@@ -1,0 +1,4 @@
+
+const config = {
+	KEY: "FeYDyPTYSBykqPbnnZfYqGOLaRtourSA"
+}

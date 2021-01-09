@@ -2,40 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Greatest News App Vue</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
-		.container {
-			padding: 20px 0
-		}
-		.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
-			float: left; 
-		}
-		.main_heading {
-			margin: 10px 0 30px;
-		}
-		.callout {
-			margin-bottom: 40px;
-		}
-		select {
-			text-transform:capitalize;
-		}
-		.loader {
-			text-align: center;
-			padding: 40px;
-		}
-		.uppercase {
-			text-transform: uppercase;
-		}
-	</style>
+        .container {
+            padding: 20px 0
+        }
+
+        .column:last-child:not(:first-child),
+        .columns:last-child:not(:first-child) {
+            float: left;
+        }
+
+        .main_heading {
+            margin: 10px 0 30px;
+        }
+
+        .callout {
+            margin-bottom: 40px;
+        }
+
+        select {
+            text-transform: capitalize;
+        }
+
+        .loader {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+    </style>
+    <title>The Greatest News App</title>
 </head>
 
 <body>
     <div class="container" id="app">
-        <h3 class="text-center">Vue News</h3>
+        <h3 class="text-center">VueNews</h3>
 
         <section class="callout secondary">
             <h5 class="text-center">Filter by Category</h5>
@@ -54,12 +59,12 @@
         </section>
 
         <h5 class="text-center uppercase" v-if="!loading">{{ title }}</b></h5>
-        <div v-if="loading" class="loader"><img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="loader">
+        <div v-if="loading" class="loader"><img  src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="loader">
         </div>
 
         <news-list v-if="!loading" :results="results"></news-list>
     </div>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
     <script src="config.js"></script>
     <script src="app.js"></script>
